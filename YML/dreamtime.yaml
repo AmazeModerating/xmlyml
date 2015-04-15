@@ -1,0 +1,61 @@
+info:
+  title: 'Tiebreaker: Dreamtime'
+  world: 'DreamtimeTE'
+  version: 1.0
+  type: dtm
+  creators:
+  - jozzmcozz
+  - xArctucus
+  contributors:
+  - Pelpelajax
+  spawn:
+  
+remove-drops:
+- leather helmet
+- leather boots
+- golden chestplate
+- iron leggings
+- stone sword
+- steak
+
+repair-drops:
+- bow
+- iron axe
+- stone sword
+
+loadout:
+  effects:
+  - damage resistance:5,5
+  helmet:
+    item: leather helmet
+  chestplate:
+    item: golden chestplate
+  leggings:
+    item: iron leggings
+  boots:
+    item: leather boots
+  0:
+    item: stone sword
+  1:
+    item: bow
+  2:
+    item: diamond pickaxe
+    enchants:
+    - durability:3
+    - dig_speed:3
+  3: 
+    item: iron axe
+  4:
+    item: golden apple
+    amount: 2
+  5: 
+    item: log
+    amount: 32
+  6:
+    item: sandstone
+    amount: 64
+  7: 
+    item: bucket
+  8:
+    item: steak
+    amount: 32
