@@ -8,7 +8,7 @@ info:
   - xArctucus
   contributors:
   - Pelpelajax
-  spawn:
+  spawn: 75.5,93,99.5,90,0
   
 remove-drops:
 - leather helmet
