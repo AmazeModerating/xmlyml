@@ -26,6 +26,7 @@ repair-drops:
 loadout:
   effects:
   - damage resistance:5,5
+  - speed:2,10
   helmet:
     item: leather helmet
   chestplate:
@@ -59,3 +60,78 @@ loadout:
   8:
     item: steak
     amount: 32
+  27:
+    item: arrow
+    amount: 16
+  28:
+    item: diamond
+    amount: 1
+    
+regions:
+  everywhere:
+    type: global
+    flags:
+      kill_player:
+        who: '*'
+        allow: true
+        triggers:
+          give_loadout:
+            loadout:
+              28:
+                item: diamond
+                amount: 1
+
+  orange-spawn:
+    type: cuboid
+    min: -3,86,98
+    max: -68,132,102
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build or destroy here!'
+  
+  orange-spawn-wall:
+    type: cuboid
+    min: 5,88,88
+    max: 3,86,111
+    flags:
+      build:
+        who '*'
+        message: '&cYou may not build or destroy here!'
+  
+  yellow-spawn:
+    type: cuboid
+    min: 101,86,32
+    max: 167,132,28
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build or destroy here!'
+  
+  yellow-spawn-wall:
+    type: cuboid
+    min: 93,88,42
+    max: 95,86,19
+    flags:
+      build:
+        who '*'
+        message: '&cYou may not build or destroy here!'
+  
+teams:
+  orange:
+    spawn: -67.5,132,100.5,90,0
+    title: Orange 
+    max: 10
+    monuments:
+      a:
+        name: Monument
+        location: 23,93,31
+  
+  yellow:
+    spawn: 165.5,132,30.5,90,0
+    title: Yellow
+    max: 10
+    monuments:
+      a:
+        name: Monument
+        location: 75,93,99
