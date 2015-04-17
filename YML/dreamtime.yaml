@@ -27,7 +27,7 @@ repair-drops:
 loadout:
   effects:
   - damage resistance:5,5
-  - speed:2,10
+  - speed:2,2
   helmet:
     item: leather helmet
   chestplate:
