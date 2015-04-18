@@ -96,7 +96,7 @@ regions:
     max: 3,86,111
     flags:
       build:
-        who '*'
+        who: '*'
         message: '&cYou may not build or destroy here!'
   
   yellow-spawn:
