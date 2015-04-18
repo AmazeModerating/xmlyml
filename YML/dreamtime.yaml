@@ -114,7 +114,7 @@ regions:
     max: 95,86,19
     flags:
       build:
-        who '*'
+        who: '*'
         message: '&cYou may not build or destroy here!'
   
 teams:
