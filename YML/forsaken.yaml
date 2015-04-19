@@ -1,0 +1,154 @@
+info:
+  title: 'Forsaken'
+  world: 'Forsaken'
+  version: 1.0
+  type: dtm
+  creators:
+  - ElementProHD
+  - Xtramajestical
+  contributors:
+  - jozzmcozz
+  spawn: 539.5,70,-1385.5,90,0
+  
+remove-drops:
+- leather boots
+- bread
+- golden apple
+
+repair-drops:
+- stone sword
+- iron axe
+- bow
+- diamond pickaxe
+  
+loadout:
+  effects:
+  - damage resistance:5,5
+  boots:
+    item: leather boots
+    enchants:
+    - depth_strider:2
+    - durability:3
+  0: 
+    item: stone sword
+  1:
+    item: bow
+  2:
+    item: diamond pickaxe
+    enchants:
+    - dig_speed:3
+  3:
+    item: golden apple
+    amount: 2
+  4: 
+    item: bread
+    amount: 32
+  5:
+    item: stone
+    amount: 32
+  6:
+    item: iron axe
+    enchants:
+    - dig_speed:3
+  7:
+    item: glass
+    amount: 32
+  8:
+    item: bucket
+  27:
+    item: arrow
+    amount: 32
+    
+teams:
+  green:
+    spawn: 444.5,15,-1307.5,-90,-10
+    title: Green team
+    max: 15
+    monuments:
+      a:
+        name: Left
+        location: 450,17,-1357
+      b:
+        name: Right
+        location: 450,17,-1257
+  
+  red:
+    spawn: 638.5,15,-1307.5,90,0
+      title: Red team
+      max: 15
+      monuments:
+        a: 
+          name: Left
+          location: 632,17,-1257
+        b:
+          name: Right
+          location: 632,17,-1357
+        
+    
+regions:
+  everywhere:
+    type: global
+    flags:
+      kill_player:
+        who: '*'
+        allow: true
+        triggers:
+          give_loadout:
+            loadout:
+              3:
+                item: golden apple
+                amount: 1
+                
+  green-spawn:
+    type: cuboid
+    min: 447,13,-1310
+    max: 442,18,-1304
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build nor destroy here!'
+  
+  green-left-monument-tube
+    type: cuboid
+    min: 445,25,-1336
+    max: 455,13,-1337
+    flags:
+      enter:
+        who: 'green'
+        message: '&cYou may not enter your own danger zone!'
+        
+  green-right-monument-tube:
+    type: cuboid
+    min: 455,13,-1277
+    max: 445,25,-1278
+    flags:
+      enter:
+        who: 'green'
+        message: '&cYou may not enter your own danger zone!'
+        
+  red-spawn:
+    type: cuboid
+    min: 635,13,-1304
+    max: 640,18,-1310
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not buuld nor destroy here!'
+  
+  red-left-monument-tube:
+    type: cuboid
+    min: 638,14,-1278
+    max: 627,25,-1277
+    flags:
+      enter:
+        who: 'red'
+        message: '&cYou may not enter your own danger zone!'
+  
+  ref-right-monument-tube:
+    type: cuboid
+    min: 626,15,-1342
+    max: 637,25,-1343
+    flags:
+      enter:
+        who: 'red'
+        message: '&cYou may not enter your own danger zone!'
