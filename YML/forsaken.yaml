@@ -108,7 +108,7 @@ regions:
         who: '*'
         message: '&cYou may not build nor destroy here!'
   
-  green-left-monument-tube
+  green-left-monument-tube:
     type: cuboid
     min: 445,25,-1336
     max: 455,13,-1337
