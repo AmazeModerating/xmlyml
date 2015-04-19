@@ -133,7 +133,7 @@ regions:
     flags:
       build:
         who: '*'
-        message: '&cYou may not buuld nor destroy here!'
+        message: '&cYou may not build nor destroy here!'
   
   red-left-monument-tube:
     type: cuboid
