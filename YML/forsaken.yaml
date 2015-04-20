@@ -67,10 +67,10 @@ teams:
     monuments:
       a:
         name: Left
-        location: 450,17,-1357
+        location: 450,17,-1358
       b:
         name: Right
-        location: 450,17,-1257
+        location: 450,17,-1258
   
   red:
     spawn: 638.5,15,-1307.5,90,0
@@ -79,10 +79,10 @@ teams:
       monuments:
         a: 
           name: Left
-          location: 632,17,-1257
+          location: 632,17,-1258
         b:
           name: Right
-          location: 632,17,-1357
+          location: 632,17,-1358
         
     
 regions:
