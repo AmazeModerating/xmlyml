@@ -1,6 +1,7 @@
 info:
   title: 'Forsaken'
   world: 'Forsaken'
+  duration: 3600
   version: 1.0
   type: dtm
   creators:
