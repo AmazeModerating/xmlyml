@@ -144,7 +144,7 @@ regions:
         who: 'red'
         message: '&cYou may not enter your own danger zone!'
   
-  ref-right-monument-tube:
+  red-right-monument-tube:
     type: cuboid
     min: 626,15,-1342
     max: 637,25,-1343
