@@ -1,8 +1,9 @@
 info:
-  title: 'DTM: Canyon'
-  world: 'Canyon'
+  title: 'Crescent: Fallen'
+  world: 'CrescentFallen'
   version: 1.0
   type: dtm
   creators:
   - jozzmcozz
+  - Vacuum
   spawn:
