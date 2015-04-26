@@ -1,0 +1,102 @@
+info:
+  title: 'Hive'
+  world: 'Hive'
+  version: 1.2
+  type: dtm
+  creators:
+  - tribblei
+  spawn: -689.5,124.0,670.5,-180,0
+ 
+remove-drops:
+- leather chestplate
+- leather leggings
+- iron boots
+- log
+- steak
+ 
+repair-drops:
+- stone sword
+- bow
+- diamond pickaxe
+ 
+regions:
+  bee-hive:
+    type: cuboid
+    min: -559,85,597
+    max: -573,93,613
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit this spawn!'
+
+  hornet-nest:
+    type: cuboid
+    min: -839, 85, 613
+    max: -825, 93, 597
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit this spawn!'
+ 
+loadout:
+  effects:
+  - damage_resistance:5,5
+  chestplate:
+    item: leather_chestplate
+  leggings:
+    item: leather_leggings
+  boots:
+    item: iron_boots
+  0:
+    item: stone sword
+  1:
+    item: bow
+    enchants:
+    - arrow_infinite:1
+  2:
+    item: diamond pickaxe
+  3:
+    item: golden apple
+    amount: 2
+  4:
+    item: steak
+    amount: 16
+  5:
+    item: log
+    amount: 32
+  6:
+    item: glass
+    amount: 64
+  7:
+    item: iron_axe
+  27:
+    item: arrow
+    amount: 1
+  28:
+    item: lapis block
+    amount: 1
+       
+teams:
+  yellow:
+    spawn: -561.5, 86, 605.5, 90, 0
+    title: Bees
+    max: 20
+    monuments:
+       a:
+        name: Left
+        location: -774, 104, 585
+       b:
+        name: Right
+        location: -774, 104, 625
+        
+  orange:
+    spawn: -836.5, 86, 605.5, -90, 0
+    title: Hornets
+    max: 20
+    monuments:
+      a:
+        name: Left
+        location: -624, 104, 625
+      b:
+        name: Right
+        location: -624, 104, 585
