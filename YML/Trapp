@@ -1,0 +1,226 @@
+info:
+  title: 'Trapp'
+  world: 'Trapp'
+  version: 1.0.0
+  type: ctw
+  creators:
+  - CaptainAndrew
+  contributors:
+  - Qixit
+  - E0C
+  spawn: -511.5,45,527.5,90,0
+  time: 16000
+  
+  
+regions:
+  defend-purple:
+    type: cuboid
+    min: -505,0,506
+    max: -410,0,548
+    flags:
+        kill_player:
+          who: 'purple'
+          allow: true
+          triggers:
+            heal:
+              amount: 4
+        enter: 
+          who: 'purple'
+          allow: true
+          triggers:
+            set_loadout:
+              loadout:
+                0:
+                 item: stone sword
+                1:
+                 item: bow
+                2:
+                 item: wood pickaxe
+                3: 
+                 item: wood axe
+                5:
+                 item: logs
+                 amount: 24
+                8:
+                 item: golden apple
+                 amount: 2
+                28:
+                 item: arrow
+                 amount: 32
+  
+  purple-attacker:
+    type: cuboid
+    min: -519,0,506
+    max: -613,0,548
+    flags:
+     enter: 
+      who: 'purple'
+      allow: true
+        triggers:
+          set_loadout:
+            loadout:
+              effects:
+              - speed:1
+              boots:
+                item: iron boots
+              0:
+                item: stone sword
+              1:
+                item: bow
+              2:
+                item: wood pickaxe
+              3: 
+                item: wood axe
+              5:
+                item: logs
+                amount: 32
+              8:
+                item: golden apple
+                amount: 6
+              28:
+                item: arrow
+                amount: 32
+  
+  purple-retriever:
+    type: cuboid
+    min: -435,24,530
+    max: -433,20,524
+    flags: 
+      enter:
+        who: 'purple'
+        triggers:
+          set_loadout:
+            loadout:
+              effects:
+              - speed:2
+              chestplate:
+                item: chainmail chestplate
+              leggings:
+                item: iron leggings
+              boots:
+                item: diamond boots
+              0:
+                item: iron sword
+              1: 
+                item: bow
+              2:
+                item: wood pickaxe
+              3: 
+                item: wood axe
+              5:
+                item: logs
+                amount: 10
+              8:
+                item: golden apple
+                amount: 32
+              28:
+                item: arrow
+                amount: 32
+          heal:
+            amount: 6
+            
+  defend-yellow:   
+    type: cuboid
+    min: -519,0,506
+    max: -613,0,548
+    flags:
+        kill_player:
+          who: 'yellow'
+          allow: true
+          triggers:
+            heal:
+              amount: 4
+        enter: 
+          who: 'yellow'
+          allow: true
+          triggers:
+            set_loadout:
+              loadout:
+                0:
+                 item: stone sword
+                1:
+                 item: bow
+                2:
+                 item: wood pickaxe
+                3: 
+                 item: wood axe
+                5:
+                 item: logs
+                 amount: 24
+                8:
+                 item: golden apple
+                 amount: 2
+                28:
+                 item: arrow
+                 amount: 32
+                
+  yellow-attacker:
+    type: cuboid
+    min: -505,0,506
+    max: -410,0,548
+    flags:
+     enter: 
+      who: 'yellow'
+      allow: true
+        triggers:
+          set_loadout:
+            loadout:
+              effects:
+              - speed:1
+              boots:
+                item: iron boots
+              0:
+                item: stone sword
+              1:
+                item: bow
+              2:
+                item: wood pickaxe
+              3: 
+                item: wood axe
+              5:
+                item: logs
+                amount: 32
+              8:
+                item: golden apple
+                amount: 6
+              28:
+                item: arrow
+                amount: 32
+            
+  yellow-retriever:
+    type: cuboid
+    min: -590,20,530
+    max: -588,24,524
+    flags: 
+      enter:
+        who: 'yellow'
+        triggers:
+          set_loadout:
+            loadout:
+              effects:
+              - speed:2
+              chestplate:
+                item: chainmail chestplate
+              leggings:
+                item: iron leggings
+              boots:
+                item: diamond boots
+              0:
+                item: iron sword
+              1: 
+                item: bow
+              2:
+                item: wood pickaxe
+              3: 
+                item: wood axe
+              5:
+                item: logs
+                amount: 10
+              8:
+                item: golden apple
+                amount: 32
+              28:
+                item: arrow
+                amount: 32
+          heal:
+            amount: 6
