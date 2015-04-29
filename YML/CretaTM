@@ -1,0 +1,146 @@
+info:
+  title: Creta
+  world: CretaTE
+  duration: 3600
+  version: 1.2
+  type: dtm
+  creators:
+  - Hacktivism
+  spawn: -757.0,148.0,-574.0,90,0
+  time: 6000
+ 
+remove-drops:
+- iron_sword
+- bow
+- arrow
+- leather_helmet
+- gold_chestplate
+- iron_leggings
+- diamond_boots
+- iron_pickaxe
+ 
+loadout:
+  helmet:
+    item: leather_helmet
+  chestplate:
+    item: gold_chestplate
+  leggings:
+    item: iron_leggings
+  boots:
+    item: diamond_boots
+  0:
+    item: iron_sword
+  1:
+    item: bow
+  2:
+    item: iron_pickaxe
+  3:
+    item: golden_apple
+    amount: 2
+  4:
+    item: log:2
+    amount: 32
+  5:
+    item: stained_clay:0
+    amount: 32
+  6:
+    item: cooked_beef
+    amount: 8
+  28:
+    item: arrow
+    amount: 64
+  effects:
+  - damage_resistance:1,2
+  - speed:1,4
+ 
+teams:
+  blue:
+    title: 'Blue Team'
+    spawn: -835.0,93.0,-517.0,180,0
+    max: 20
+    monuments:
+      a:
+        name: Left-A
+        location: -862,102,-665
+      b:
+        name: Left-B
+        location: -862,101,-665
+      c:
+        name: Right-A
+        location: -809,102,-665
+      d:
+        name: Right-B
+        location: -809,101,-665
+  pink:
+    title: 'Pink Team'
+    spawn: -835.0,93.0,-633.0,0,0
+    max: 20
+    monuments:
+      a:
+        name: Left-A
+        location: -809,102,-486
+      b:
+        name: Left-B
+        location: -809,101,-486
+      c:
+        name: Right-A
+        location: -862,102,-486
+      d:
+        name: Right-B
+        location: -862,101,-486
+regions:
+  height-limit:
+    type: cuboid
+    min: -871,129,-481
+    max: -800,86,-670
+    invert: true
+    flags:
+      build:
+        who: '*'
+        allow: false
+        message: '&cYou may not build above the height limit.'
+  blue-spawn:
+    type: cuboid
+    min: -829,91,-512
+    max: -842,96,-525
+    flags:
+      build:
+        who: '*'
+        allow: false
+        message: '&c{build.spawnSpecific,&9Blue Team&c}'
+  blue-stairs:
+    type: cuboid
+    min: -838,93,-526
+    max: -833,99,-531
+    flags:
+      build:
+        who: '*'
+        allow: false
+        message: '&c{build.spawnSpecific,&9Blue Team&c}'
+  pink-spawn:
+    type: cuboid
+    min: -842,91,-639
+    max: -829,96,-626
+    flags:
+      build:
+        who: '*'
+        allow: false
+        message: '&c{build.spawnSpecific,&dPink Team&c}'
+  pink-stairs:
+    type: cuboid
+    min: -838,93,-625
+    max: -833,99,-620
+    flags:
+      build:
+        who: '*'
+        allow: false
+        message: '&c{build.spawnSpecific,&dPink Team&c}'
+        
+  boundary:
+    type: cuboid
+    min: -876,144,-689
+    max: -787,69,-458
+    invert: true
+      build:
+        who: '*'
+        message: '&cYou may not build beyond this map''s restriction boundaries.'
