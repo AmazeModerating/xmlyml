@@ -46,6 +46,8 @@ regions:
     flags:
       build:
         who: '*'
+      enter:
+        who: '*'
         message: '&cYou may not build beyond this map's restriction boundaries.'
 
 loadout:
