@@ -1,0 +1,140 @@
+info:
+  title: Castle Adventure
+  world: CastleAdventureTE
+  version: 1.1
+  type: dtm
+  creators:
+  - Jessamania
+  spawn: -28.99,94.0,-902.0,0,0
+
+regions:
+  lime-spawn:
+    type: cylinder
+    center: -110,57,-791
+    radius: 9
+    height: 4
+    flags:
+      build:
+        who: '*'
+        priority: 1
+        message: '&cYou may not edit this region!'
+  lime-iron:
+    type: cuboid
+    min: -104,62,-806
+    max: -120,59,-772
+    block-type: iron_block
+    flags:
+      build:
+        who: '*'
+        allow: true
+        priority: 5
+
+  pink-spawn:
+    type: cylinder
+    center: 52,57,-791
+    radius: 9
+    height: 4
+    flags:
+      build:
+        who: '*'
+        priority: 1
+        message: '&cYou may not edit this region!'
+  pink-iron:
+    type: cuboid
+    min: 47,62,-772
+    max: 65,58,-808
+    block-type: iron_block
+    flags:
+      build:
+        who: '*'
+        allow: true
+        priority: 5
+        
+  boundary:
+    type: cuboid
+    min: 126,153,-885
+    max: 178,31,-704
+    invert: true
+    flags: 
+      build:
+        who: '*'
+      enter:
+        who: '&cYou may not build beyond this map's restriction boundaries.'
+      
+remove-drops:
+- glass
+- log
+- stone
+- leather helmet
+- leather chestplate
+- leather leggings
+- leather boots
+
+repair-drops:
+- iron sword
+- bow
+
+loadout:
+  effects:
+  - damage resistance:5,5
+  helmet:
+    item: leather helmet
+  chestplate:
+    item: leather chestplate
+  leggings:
+    item: leather leggings
+  boots:
+    item: leather boots
+  0:
+    item: iron sword
+  1:
+    item: bow
+    enchants:
+    - arrow_infinite:5
+  2:
+    item: diamond pickaxe
+    enchants:
+    - dig speed:1
+    - durability:1
+  3:
+    item: golden apple
+    amount: 3
+  4:
+    item: steak
+    amount: 32
+  5:
+    item: stone
+    amount: 64
+  6:
+    item: glass
+    amount: 64
+  7:
+    item: log
+    amount: 64
+  28:
+    item: arrow
+    amount: 1
+
+teams:
+  pink:
+    spawn: 52.5,58,-790.5,90,0
+    title: Pink Team
+    max: 20
+    monuments:
+      a:
+        name: Blue
+        location: -161,61,-803
+      b:
+        name: Purple
+        location: -161,61,-779
+  lime:
+    spawn: -110.5,58,-790.5,-90,0
+    title: Lime Team
+    max: 20
+    monuments:
+      a:
+        name: Blue
+        location: 103,61,-803
+      b:
+        name: Purple
+        location: 103,61,-779
