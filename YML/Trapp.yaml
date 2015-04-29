@@ -11,7 +11,34 @@ info:
   spawn: -511.5,45,527.5,90,0
   time: 16000
   
-  
+repair-drops:
+- stone sword
+- bow
+- wood pickaxe
+- wood axe
+
+remove-drops:
+- leather helmet
+- iron sword
+- bow
+- wood pickaxe
+- wood axe
+- chainmail chestplate
+- diamond boots
+- stained clay
+- glowstone dust
+- ender stone
+- cobblestone
+- wood slab
+
+loadout:
+  effects:
+  - damage resistance:5,5
+  helmet:
+    item: leather helmet
+  4:
+    item: stained clay
+
 regions:
   defend-purple:
     type: cuboid
@@ -118,7 +145,7 @@ regions:
                 amount: 32
           heal:
             amount: 6
-            
+  
   defend-yellow:   
     type: cuboid
     min: -519,0,506
@@ -153,7 +180,7 @@ regions:
                 28:
                  item: arrow
                  amount: 32
-                
+  
   yellow-attacker:
     type: cuboid
     min: -505,0,506
@@ -186,7 +213,7 @@ regions:
               28:
                 item: arrow
                 amount: 32
-            
+  
   yellow-retriever:
     type: cuboid
     min: -590,20,530
@@ -224,3 +251,52 @@ regions:
                 amount: 32
           heal:
             amount: 6
+
+  boundary:
+    type: cuboid
+    min: -632,65,556
+    max: -393,-2,489
+    invert: true
+    flags:
+      build: 
+        who: '*'
+        message: '&cYou may not build beyond this map''s restriction boundaries.'
+        
+  purple-spawn:
+    type: cylinder
+    center: -416,21,527
+    radius: 8
+    height: 16    
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+        
+  yellow-spawn:
+    type: cylinder
+    center: -605,21,527
+    radius: 8
+    height: 16
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  
+  yellow-monument:
+    type: cuboid
+    min: -582,25,526
+    max: -583,28,528
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build near the monument area.'
+        
+  purple-monument:
+    type: cuboid:
+    min: -439,25,528
+    max: -438,28,526
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build near the monument area.'
+    
