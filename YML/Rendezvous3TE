@@ -1,0 +1,101 @@
+info:
+  title: 'Rendezvous 3'
+  world: 'Rendezvous3TE'
+  version: 1.0.1
+  type: dtm
+  creators:
+  - ParaPenguin
+  - Tanpiku
+  spawn: -235.5,90,56.5,180,0
+  time: 14200
+
+remove-drops:
+- leather helmet
+- log
+- arrow
+
+repair-drops:
+- iron sword
+- stone sword
+- bow
+- diamond pickaxe
+
+regions:
+ red-spawn:
+   type: cuboid
+   min: -325,58,-18
+   max: -343,68,-6
+   flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit the spawn area.'
+ blue-spawn:
+   type: cuboid
+   min: -129,68,-18
+   max: -147,58,-6
+   flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit the spawn area.'
+        
+  boundary:
+    type: cuboid
+    min: -436,117,36
+    max: -26,44,-67
+    invert: true
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build beyond this map's restriction boundaries.'
+
+loadout:
+  effects:
+  - damage resistance:5,5
+  helmet:  
+    item: leather helmet
+  0:
+    item: stone sword
+  1:
+    item: bow
+    enchants:
+    - arrow_infinite:1
+  2:
+    item: diamond pickaxe
+  3:
+    item: golden apple
+    amount: 3
+  4:
+    item: log
+    amount: 64
+  5:
+    item: glass
+    amount: 32
+  6:
+    item: apple
+    amount: 32
+  27:
+    item: arrow
+    amount: 1
+teams:
+  red:
+    spawn: -333.5,64,-11.5,-90,0
+    title: Red Team
+    max: 25
+    monuments:
+      a:
+        name: Left
+        location: -56,66,-41
+      b:
+        name: Right
+        location: -56,66,17
+  blue:
+    spawn: -137.5,64,-11.5,90,0
+    title: Blue Team
+    max: 25
+    monuments:
+      a:
+        name: Left
+        location: -416,66,17
+      b:
+        name: Right
+        location: -416,66,-41
