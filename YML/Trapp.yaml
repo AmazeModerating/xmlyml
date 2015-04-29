@@ -113,6 +113,9 @@ regions:
     min: -435,24,530
     max: -433,20,524
     flags: 
+      build:
+        who: '*'
+        message: '&cYou may not build in the wool room.'
       enter:
         who: 'purple'
         triggers:
@@ -219,6 +222,9 @@ regions:
     min: -590,20,530
     max: -588,24,524
     flags: 
+      build:
+        who: '*'
+        message: '&cYou may not build in the wool room.'
       enter:
         who: 'yellow'
         triggers:
@@ -299,4 +305,23 @@ regions:
       build:
         who: '*'
         message: '&cYou may not build near the monument area.'
-    
+
+teams:
+  yellow:
+    spawn: -605.5,21,527.5,180,0
+    title: Yellow Team
+    max: 15
+    wools:
+      purple:
+        name: Purple Wool
+        chest: -433,19,527
+        monument: -582,26,527
+  purple:
+    spawn: -416.5,21,527.5,90,0
+    title: Purple Team
+    max: 15
+    wools:
+      yellow:
+        name: Yellow Wool
+        chest: -588,19,527
+        monument: -439,26,527
