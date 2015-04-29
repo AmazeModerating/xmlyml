@@ -38,6 +38,7 @@ loadout:
     item: leather helmet
   4:
     item: stained clay
+    amount: 32
 
 regions:
   defend-purple:
@@ -66,7 +67,7 @@ regions:
                 3: 
                  item: wood axe
                 5:
-                 item: logs
+                 item: log
                  amount: 24
                 8:
                  item: golden apple
@@ -99,7 +100,7 @@ regions:
               3: 
                 item: wood axe
               5:
-                item: logs
+                item: log
                 amount: 32
               8:
                 item: golden apple
@@ -138,7 +139,7 @@ regions:
               3: 
                 item: wood axe
               5:
-                item: logs
+                item: log
                 amount: 10
               8:
                 item: golden apple
@@ -175,7 +176,7 @@ regions:
                 3: 
                  item: wood axe
                 5:
-                 item: logs
+                 item: log
                  amount: 24
                 8:
                  item: golden apple
@@ -208,7 +209,7 @@ regions:
               3: 
                 item: wood axe
               5:
-                item: logs
+                item: log
                 amount: 32
               8:
                 item: golden apple
@@ -247,7 +248,7 @@ regions:
               3: 
                 item: wood axe
               5:
-                item: logs
+                item: log
                 amount: 10
               8:
                 item: golden apple
