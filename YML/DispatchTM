@@ -1,0 +1,91 @@
+info:
+  title: 'Dispatch'
+  world: DispatchTE
+  version: 1.0
+  type: dtm
+  creators:
+  - Tanpiku
+  - jozzmcozz
+  spawn: -32.5,37,-43.5,0,0
+
+remove-drops:
+- leather helmet
+- leather chestplate
+- planks
+- log
+- bread
+- arrow
+
+repair-drops:
+- diamond sword
+- diamond axe
+- bow
+- diamond pickaxe
+
+regions:
+  red-area:
+    type: cuboid
+    min: 10,1,76
+    max: 4,8,82
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit red team''s spawn!'
+  blue-area:
+    type: cuboid
+    min: -77,1,76
+    max: -71,8,82
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit blue team''s spawn!'
+  
+  boundary:
+    type: cuboid
+    min: 52,83,-39
+    max: -113,-10,117
+    invert: true
+    flags:
+      build:
+        who: '*'
+      enter:
+        who: '*'
+        message: '&cYou may not build beyond this map's restriction boundaries.'
+
+loadout:
+  effects:
+  - damage resistance:5,5
+  helmet:  
+    item: leather_helmet
+  chestplate:
+    item: leather_chestplate
+
+teams:
+  red:
+    spawn: 7.5,2,79.5,-180,0
+    title: Red Team
+    max: 8
+    monuments:
+      a:
+        name: Top
+        location: -74,20,33
+      b:
+        name: Middle
+        location: -74,19,33
+      c:
+        name: Bottom
+        location: -74,18,33
+  blue:
+    spawn: -73.5,2,79.5,180,0
+    title: Blue Team
+    max: 8
+    monuments:
+      a:
+        name: Top
+        location: 7,20,33
+      b:
+        name: Middle
+        location: 7,19,33
+      c:
+        name: Bottom
+        location: 7,18,33
