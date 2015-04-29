@@ -83,7 +83,7 @@ regions:
      enter: 
       who: 'purple'
       allow: true
-        triggers:
+      triggers:
           set_loadout:
             loadout:
               effects:
@@ -192,7 +192,7 @@ regions:
      enter: 
       who: 'yellow'
       allow: true
-        triggers:
+      triggers:
           set_loadout:
             loadout:
               effects:
@@ -298,7 +298,7 @@ regions:
         message: '&cYou may not build near the monument area.'
         
   purple-monument:
-    type: cuboid:
+    type: cuboid
     min: -439,25,528
     max: -438,28,526
     flags:
