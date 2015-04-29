@@ -1,0 +1,162 @@
+info:
+  title: Sunbeam Temple
+  world: SunbeamTempleTE
+  duration: 3600
+  version: 1.0
+  type: dtm
+  creators:
+  - Pavlo
+  spawn: 69.6,200,79.5,90,0
+  
+remove-drops:
+- iron helmet
+- leather chestplate
+- leather leggings
+- iron boots
+- diamond pickaxe
+- iron sword
+
+repair-drops:
+- iron sword
+- bow
+- diamond pickaxe
+  
+loadout:
+  effects:
+  - damage resistance:5,5
+  helmet:
+    item: iron helmet
+  chestplate:
+    item: leather chestplate
+  leggings:
+    item: leather leggings
+  boots:
+    item: iron boots
+  0:
+    item: iron sword
+  1:
+    item: bow
+    enchants:
+    - arrow infinite:1
+  2:
+    item: diamond pickaxe
+    enchants:
+    - dig speed:1
+  3:
+    item: golden apple
+    amount: 3
+  4:
+    item: log
+    amount: 64
+  5:
+    item: leaves
+    amount: 64
+  6:
+    item: cooked chicken
+    amount: 32
+  7:
+    item: exp_bottle
+    amount: 3
+  8:
+    item: glass
+    amount: 64
+  27:
+    item: lapis block
+    amount: 1
+  28:
+    item: arrow
+    amount: 1
+    
+regions:
+  cyan-spawn:
+    type: cylinder
+    center: 0,144,11
+    radius: 6
+    height: 5
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  yellow-spawn:
+    type: cylinder
+    center: 0,144,147
+    radius: 6
+    height: 5
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  cyan-table:
+    type: cuboid
+    min: 0,143,39
+    max: 0,143,39
+    flags:
+      build:
+        who: '*'
+        message: '&cYou cannot break this.'
+  yellow-table:
+    type: cuboid
+    min: 0,143,119
+    max: 0,143,119
+    flags:
+      build:
+        who: '*'
+        message: '&cYou cannot break this.'
+  everywhere:
+    type: global
+    flags:
+      kill_player:
+        who: '*'
+        allow: true
+        triggers:
+          give_loadout:
+            loadout:
+              0:
+                item: exp_bottle
+                amount: 3
+                
+  boundary:
+    type: cuboid
+    min: -81,200,-42
+    max: 85,123,197
+    invert: true
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build beyond this map's restriction boundaries.'
+
+teams:
+  cyan:
+    spawn: 0.5,145,11.5,0,0
+    title: Cyan Team
+    max: 20
+    monuments:
+      a:
+        name: Left-A
+        location: 45,147,162
+      b:
+        name: Left-B
+        location: 45,155,162
+      c:
+        name: Right-A
+        location: -45,147,162
+      d:
+        name: Right-B
+        location: -45,155,162
+  yellow:
+    spawn: 0.5,145,147.5,180,0
+    title: Yellow Team
+    max: 20
+    monuments:
+      a:
+        name: Left-A
+        location: -45,147,-4
+      b:
+        name: Left-B 
+        location: -45,155,-4
+      c:
+        name: Right-A
+        location: 45,147,-4
+      d:
+        name: Right-B
+        location: 45,155,-4
