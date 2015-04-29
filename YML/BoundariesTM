@@ -1,0 +1,258 @@
+info:
+  title: 'Boundaries'
+  world: BoundariesTE
+  version: 1.0
+  type: dtm
+  creators:
+  - Qixit
+  - Tanpiku
+  spawn: 1476.5,57,-1.5,-90,0
+  time: 12600
+
+teams:
+  red:
+    spawn: 1569.5,10,109.5,180,0
+    title: Red Team
+    max: 9
+    monuments:
+      a:
+        name: Left
+        location: 1504,23,-86
+      b:
+        name: Right
+        location: 1634,23,-86
+  blue:
+    spawn: 1569.5,10,-113.5,0,0
+    title: Blue Team
+    max: 9
+    monuments:
+      a:
+        name: Left
+        location: 1634,23,81
+      b:
+        name: Right
+        location: 1504,23,81
+
+remove-drops:
+- leather helmet
+- leather chestplate
+- leather leggings
+- leather boots
+- cobble
+- log
+- arrow
+- bread
+- tnt
+- bucket
+- redstone
+- lever
+- diode
+- dispenser
+
+repair-drops:
+- iron sword
+- diamond pickaxe
+- iron axe
+- bow
+
+loadout:
+  effects:
+  - damage resistance:5,5
+  helmet:
+    item: leather_helmet
+  chestplate:
+    item: leather_chestplate
+  leggings:
+    item: leather_leggings
+  boots:
+    item: leather_boots
+
+regions:
+  spawn-blue:
+    type: cuboid
+    min: 1567,13,-115
+    max: 1571,9,-102
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit the spawn area.'
+      enter:
+        who: 'red'
+        message: '&cYou may not enter blue''s spawn.'
+  spawn-red:
+    type: cuboid
+    min: 1571,13,110
+    max: 1567,9,97
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit the spawn area.'
+      enter:
+        who: 'blue'
+        message: '&cYou may not enter red''s spawn.'
+  height-limit:
+    type: cuboid
+    min: 1482,51,110
+    max: 1655,58,-114
+    flags:
+      build:
+        who: '*'
+        message: '&cYou have reached the maximum build height for this map.'
+  supply-blue:
+    type: cuboid
+    min: 1577,17,-100
+    max: 1561,9,-88
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit the supply chest area.'
+      enter:
+        who: 'red'
+        message: '&cYou may not enter the supply room.'
+  supply-red:
+    type: cuboid
+    min: 1561,17,95
+    max: 1577,9,83
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit the supply chest area.'
+      enter:
+        who: 'blue'
+        message: '&cYou may not enter the supply room.'
+  portal-blue-left:
+    type: cuboid
+    min: 1561,8,90
+    max: 1561,16,88
+    flags:
+      enter:
+        who: '*'
+        allow: true
+        triggers:
+          teleport:
+            to: 1569.5,20,92.5,-180,0
+  portal-blue-right:
+    type: cuboid
+    min: 1577,16,88
+    max: 1577,8,90
+    flags:
+      enter:
+        who: '*'
+        allow: true
+        triggers:
+          teleport:
+            to: 1569.5,20,92.5,-180,0
+  portal-red-right:
+    type: cuboid
+    min: 1561,8,-95
+    max: 1561,16,-93
+    flags:
+      enter:
+        who: '*'
+        allow: true
+        triggers:
+          teleport:
+            to: 1569.5,20,-96.5,0,0
+  portal-red-left:
+    type: cuboid
+    min: 1577,8,-95
+    max: 1577,16,-93
+    flags:
+      enter:
+        who: '*'
+        allow: true
+        triggers:
+          teleport:
+            to: 1569.5,20,-96.5,0,0
+  chest-1:
+    type: cuboid
+    min: 1548,16,90
+    max: 1547,15,90
+    flags:
+      build:
+        who: 'blue'
+        message: '&cYou may not break your &credstone supply chests.'
+  chest-2:
+    type: cuboid
+    min: 1543,15,91
+    max: 1542,16,91
+    flags:
+      build:
+        who: 'blue'
+        message: '&cYou may not break your &credstone supply chests.'
+  chest-3:
+    type: cuboid
+    min: 1540,15,92
+    max: 1539,16,92
+    flags:
+      build:
+        who: 'blue'
+        message: '&cYou may not break your &credstone supply chests.'
+  chest-4:
+    type: cuboid
+    min: 1535,15,92
+    max: 1536,16,92
+    flags:
+      build:
+        who: 'blue'
+        message: '&cYou may not break your &credstone supply chests.'
+  chest-5:
+    type: cuboid
+    min: 1535,16,-97
+    max: 1536,15,-97
+    flags:
+      build:
+        who: 'red'
+        message: '&cYou may not break your &credstone supply chests.'
+  chest-6:
+    type: cuboid
+    min: 1539,16,-97
+    max: 1540,15,-97
+    flags:
+      build:
+        who: 'red'
+        message: '&cYou may not break your &credstone supply chests.'
+  chest-7:
+    type: cuboid
+    min: 1542,16,-96
+    max: 1543,15,-96
+    flags:
+      build:
+        who: 'red'
+        message: '&cYou may not break your &credstone supply chests.'
+  chest-8:
+    type: cuboid
+    min: 1547,16,-95
+    max: 1548,15,-95
+    flags:
+      build:
+        who: 'red'
+        message: '&cYou may not break your &credstone supply chests.'
+  t-spawn1:
+    type: cylinder
+    center: 1569,19,-91
+    radius: 6
+    height: 12
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  t-spawn2:
+    type: cylinder
+    center: 1569,19,87
+    radius: 6
+    height: 12
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  
+  boundary:
+    type: cuboid
+    min: 1684,72,130
+    max: 1446,-2,-142
+    invert: true
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build beyond this map''s restriction boundaries.'
