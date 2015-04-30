@@ -59,7 +59,8 @@ regions:
       build:
         who: '*'
       enter:
-        who: '&cYou may not build beyond this map's restriction boundaries.'
+        who: '*'
+        message: '&cYou may not build beyond this map''s restriction boundaries.'
       
 remove-drops:
 - glass
