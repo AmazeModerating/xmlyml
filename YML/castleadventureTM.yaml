@@ -52,13 +52,11 @@ regions:
         
   boundary:
     type: cuboid
-    min: 126,153,-885
-    max: 178,31,-704
+    min: -176,31,-701
+    max: 146,167,-882
     invert: true
     flags: 
       build:
-        who: '*'
-      enter:
         who: '*'
         message: '&cYou may not build beyond this map''s restriction boundaries.'
       
