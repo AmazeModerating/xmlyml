@@ -56,7 +56,7 @@ regions:
           who: 'purple'
           allow: true
           triggers:
-            set_loadout:
+            give_loadout:
               loadout:
                 0:
                  item: stone sword
@@ -85,7 +85,7 @@ regions:
       who: 'purple'
       allow: true
       triggers:
-          set_loadout:
+          give_loadout:
             loadout:
               effects:
               - speed:1
@@ -109,7 +109,7 @@ regions:
                 item: arrow
                 amount: 32
   
-  purple-retriever:
+  yellow-retriever:
     type: cuboid
     min: -435,24,530
     max: -433,20,524
@@ -118,9 +118,9 @@ regions:
         who: '*'
         message: '&cYou may not build in the wool room.'
       enter:
-        who: 'purple'
+        who: 'yellow'
         triggers:
-          set_loadout:
+          give_loadout:
             loadout:
               effects:
               - speed:2
@@ -165,7 +165,7 @@ regions:
           who: 'yellow'
           allow: true
           triggers:
-            set_loadout:
+            give_loadout:
               loadout:
                 0:
                  item: stone sword
@@ -194,7 +194,7 @@ regions:
       who: 'yellow'
       allow: true
       triggers:
-          set_loadout:
+          give_loadout:
             loadout:
               effects:
               - speed:1
@@ -218,7 +218,7 @@ regions:
                 item: arrow
                 amount: 32
   
-  yellow-retriever:
+  purple-retriever:
     type: cuboid
     min: -590,20,530
     max: -588,24,524
@@ -227,9 +227,9 @@ regions:
         who: '*'
         message: '&cYou may not build in the wool room.'
       enter:
-        who: 'yellow'
+        who: 'purple'
         triggers:
-          set_loadout:
+          give_loadout:
             loadout:
               effects:
               - speed:2
