@@ -1,0 +1,247 @@
+info:
+  title: 'Brushwoods'
+  world: 'Brushwoods'
+  version: 1.0
+  type: ctw
+  creators:
+  - Tanpiku
+  spawn: 142.5,19,32.5,90,1
+ 
+remove-drops:
+- leather helmet
+- leather chestplate
+- leather leggings
+- leather boots
+- steak
+ 
+repair-drops:
+- iron sword
+- stone sword
+- bow
+- diamond pickaxe
+ 
+regions:
+  WPROT1:
+    type: sphere
+    radius: 1
+    center: 56,20,114
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build within this radius of the wool.'
+  WPROT2:
+    type: sphere
+    radius: 1
+    center: 56,20,-51
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build within this radius of the wool.'
+  boundary:
+    type: cuboid
+    min: -15,45,-53
+    max: 128,0,116
+    invert: true
+    flags:
+      build:
+        who: '*'
+      enter:
+        who: '*'
+  wool-chest-1:
+    type: point
+    point: 56,20,-51
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not break this chest.'
+  wool-chest-2:
+    type: point
+    point: 56,20,114
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not break this chest.'
+  wool-tower-red:
+    type: sphere
+    center: 56,13,-48
+    radius: 4
+    height: 14
+    flags:
+      enter:
+        who: 'lime'
+        message: '&cYou may not enter in your wool room.'
+      build:
+        who: 'lime'
+        message: '&cYou may not build in your wool room.'
+  wool-tower-blue:
+    type: sphere
+    center: 56,13,111
+    radius: 4
+    height: 14
+    flags:
+      enter:
+        who: 'orange'
+        message: '&cYou may not enter in your wool room.'
+      build:
+        who: 'orange'
+        message: '&cYou may not build in your wool room.'
+  wool-place-1:
+    type: point
+    point: 56,16,90
+    flags:
+      build:
+        allow: 'true'
+        who: '*'
+  wool-place-2:
+    type: point
+    point: 56,16,-27
+    flags:
+      build:
+        allow: 'true'
+        who: '*'
+  lime-spawn:
+    type: cylinder
+    center: 56,14,-24
+    radius: 5
+    height: 5
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  orange-spawn:
+    type: cylinder
+    center: 56,14,87
+    radius: 5
+    height: 5
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  
+  orange-team-spawn1:
+    type: cuboid
+    min: 35,31,103
+    max: 22,19,115
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  
+  orange-team-spawn2:
+    type: cuboid
+    min: 77,30,103
+    max: 90,19,115
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area.'
+  
+  void-behind-monument-orange:
+    type: cuboid
+    min: 60,13,105
+    max: 52,17,93
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in this void area!'
+        
+  lime-team-spawn1:
+    type: cuboid
+    min: 77,31,-39
+    max: 90,20,-51
+    flags:
+      build: '*'
+      message: '&cYou may not build in the spawn area!'
+      
+  lime-team-spawn2:
+    type: cuboid
+    min: 35,31,-39
+    max: 22,20,-51
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in the spawn area!'
+  
+  void-behind-monument-lime:
+    type: cuboid
+    min: 52,13,-41
+    max: 60,16,-29
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build in this void area!'
+        
+  everywhere:
+    type: global
+    flags:
+      kill_player:
+        who: '*'
+        allow: true
+        triggers:
+          give_loadout:
+            loadout:
+              0:
+                item: arrow
+                amount: 2
+         
+loadout:
+  effects:
+  - damage resistance:5,5
+  chestplate:
+    item: leather chestplate
+  0:
+    item: stone sword
+  1:
+    item: bow
+    enchants:
+    - arrow_infinite:1
+  2:
+    item: diamond pickaxe
+  3:
+    item: iron axe
+  4:
+    item: iron shovel
+    enchants:
+    - dig_speed:1
+  5:
+    item: wool:12
+    amount: 32
+  6:
+    item: log
+    amount: 16
+  7:
+    item: dirt
+    amount: 16
+  8:
+    item: steak
+    amount: 32
+  27:
+    item: arrow
+    amount: 1
+  28:
+    item: golden apple
+    amount: 1
+ 
+teams:
+  lime:
+    spawns:
+    - 88.5,19,-49.5,40,0
+    - 24.5,19,-49.5,-40,0
+    title: Lime Team
+    max: 25
+    wools:
+      blue:
+        name: Blue Wool
+        chest: 56,20,114
+        monument: 56,16,-27
+  orange:
+    spawns:
+    - 88.5,19,113.5,140,0
+    - 24.5,19,113.5,-140,0
+    title: Orange Team
+    max: 25
+    wools:
+      red:
+        name: Red Wool
+        chest: 56,20,-51
+        monument: 56,16,90
