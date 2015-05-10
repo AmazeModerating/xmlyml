@@ -1,0 +1,125 @@
+info:
+  title: 'Opulence'
+  world: 'Opulence'
+  version: 1.0
+  type: dtm
+  creators:
+  - PokerFace
+  contributors:
+  - Awesomerp
+  spawn: -16.5,132,-245.5,90,0
+  
+  loadout:
+  effects:
+  - damage resistance:5,5
+  helmet:
+    item: leather helmet
+  chestplate:
+    item: leather chestplate
+  leggings:
+    item: iron leggings
+  boots:
+    item: leather boots
+  0:
+    item: iron sword
+  1:
+    item: bow
+    enchants:
+    - arrow infinite:1
+  2:
+    item: diamond pickaxe
+    enchants:
+    - dig_speed:1
+  3:
+    item: golden apple
+    amount: 3
+  4:
+    item: log
+    amount: 32
+  5:
+    item: glass
+    amount: 64
+  6:
+    item: carrot
+    amount: 32
+  27:
+    item: arrow
+    amount: 1
+  28:
+    item: lapis block
+    amount: 1
+    
+regions:
+  blue-spawn:
+    type: cylinder
+    center: -16,59,-482
+    radius: 12
+    height: 10
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit this team''s spawn!'
+        
+  gray-spawn:
+    type: cylinder
+    center: -16,59,-8
+    radius: 12
+    height: 10
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not edit this team''s spawn!'
+    
+remove-drops:
+- leather helmet
+- chain chestplate
+- iron leggings
+- leather boots
+- diamond pickaxe
+
+repair-drops:
+- iron sword
+- bow
+- diamond pickaxe
+
+teams:
+  gray:
+    spawn: -16.5,62,-8.5,-178,0
+    title: Gray Team
+    max: 25
+    monuments:
+      a:
+        name: Front
+        location: -17,61,-130
+      b:
+        name: Mid-Right
+        location: 22,61,-104
+      c:
+        name: Mid-Left
+        location: -56,61,-104
+      d:
+        name: B-Right
+        location: 72,61,-27
+      e:
+        name: B-Left
+        location: -106,61,-27
+  blue:
+    spawn: -16.5,62,-482.5,0,0
+    title: Blue Team
+    max: 25
+    monuments:
+      a:
+        name: Front
+        location: -17,61,-362
+      b:
+        name: Mid-Right
+        location: -56,61,-388
+      c:
+        name: Mid-Left
+        location: 22,61,-388
+      d:
+        name: B-Right
+        location: -106,61,-465
+      e:
+        name: B-Left
+        location: 72,61,-465
