@@ -1,0 +1,139 @@
+info:
+  title: Operation D
+  world: OperationD
+  version: 1.0
+  type: dtm
+  creators:
+  - MapDev
+  - Ambivalence_
+  - Demo_Spookzz
+  - AmazeModerating
+  spawn: -92.5,87,170.5,90,0
+  time: 6000
+
+regions:
+  boundary:
+    type: cuboid
+    min: -80,112,76
+    max: -19,27,264
+    invert: true
+    flags:
+      build:
+        who: '*'
+        message: '&cYou may not build outside the map''s boundaries!'
+
+  red-fall-damage:
+    type: cuboid
+    min: -52,60,87
+    max: -48,56,83
+    flags:
+      fall_damage:
+        who: '*'
+      build:
+        who: '*'
+        message: '&cYou cannot build on the shroom!'
+
+  blue-fall-damage:
+    type: cuboid
+    min: -48,60,253
+    max: -52,56,257
+    flags:
+      fall_damage:
+        who: '*'
+      build:
+        who: '*'
+        message: '&cYou cannot build on the shroom!'
+
+  red-bottom-tnt-only:
+    type: cuboid
+    min: -50,51,116
+    max: -50,47,116
+    flags:
+      build:
+        who: 'blue'
+        priority: 5
+        message: '&cYou can only break the endstone with TNT!'
+      block_explosion_damage:
+        who: 'blue'
+        allow: 'true'
+        priority: 10
+  blue-bottom-tnt-only:
+    type: cuboid
+    min: -50,51,224
+    max: -50,47,224
+    flags:
+      build:
+        who: 'red'
+        priority: 5
+        message: '&cYou can only break the endstone with TNT!'
+      block_explosion_damage:
+        who: 'red'
+        allow: 'true'
+        priority: 10
+  red-top-tnt-only:
+    type: cuboid
+    min: -50,69,116
+    max: -50,65,116
+    flags:
+      build:
+        who: 'blue'
+        priority: 5
+        message: '&cYou can only break the endstone with TNT!'
+      block_explosion_damage:
+        who: 'blue'
+        allow: 'true'
+        priority: 10
+  blue-top-tnt-only:
+    type: cuboid
+    min: -50,69,224
+    max: -50,65,224
+    flags:
+      build:
+        who: 'red'
+        priority: 5
+        message: '&cYou can only break the endstone with TNT!'
+      block_explosion_damage:
+        who: 'red'
+        allow: 'true'
+        priority: 10
+
+teams:
+  red:
+    spawn: -50.5,155,70.5,0,0
+    max: 18
+    monuments:
+      a:
+        name: Top
+        location: -50,67,224
+      b:
+        name: Bottom
+        location: -50,49,224
+      c:
+        name: B-Middle
+        location: -50,47,240
+  blue:
+    spawn: -50.5,155.5,270.5,90,0
+    max: 18
+    monuments:
+      a:
+        name: Top
+        location: -50,67,116
+      b:
+        name: Bottom
+        location: -50,49,116
+      c:
+        name: B-Middle
+        location: -50,47,100
+
+loadout:
+  effects:
+  - damage resistance:5,5
+  - speed:1,5
+  helmet:
+    item: leather_helmet
+  chestplate:
+    item: leather_chestplate
+  boots:
+    item: leather_boots
+    enchants: 
+    - protection_fall: 2
